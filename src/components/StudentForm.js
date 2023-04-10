@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import QuestionResult from './QuestionResult';
 import axios from 'axios';
-const API_KEY = "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";
+
+const API_KEY = process.env.REACT_APP_OPENAI_API_KEY;
 
 
 const StudentForm = () => {
@@ -76,6 +77,7 @@ const APIBody ={
     //   console.error('Error fetching answer:', error);
     // }
     console.log(myPrompt);
+    console.log(process.env);
   };
   return (
     <div>
